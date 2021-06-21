@@ -1,7 +1,6 @@
 package co.com.foodbank.country.dto;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -10,8 +9,7 @@ import javax.validation.constraints.NotNull;
 public class CountryDTO {
 
     @NotNull
-    @NotBlank
-    @NotEmpty
+    @NotBlank(message = "Country must be completed.")
     public String name;
 
 
